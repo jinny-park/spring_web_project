@@ -18,7 +18,7 @@ public class IndexControllerTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void 메인페이지_로딩() {
+    public void 메인페이지_로딩() { // 스프링 시큐리티 의존성을 없애야 함..안 그러면 로그인화면부터 떠서 테스팅 안됨
         //when
         String body = this.restTemplate.getForObject("/index", String.class);
 
