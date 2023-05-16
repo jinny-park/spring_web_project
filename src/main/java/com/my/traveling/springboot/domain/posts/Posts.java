@@ -1,5 +1,6 @@
 package com.my.traveling.springboot.domain.posts;
 
+import com.my.traveling.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,11 +13,11 @@ import javax.persistence.Id;
 
 @Getter
 @NoArgsConstructor
-@Entity
-public class Posts{
+@Entity// 테이블과 링크될 클래스임을 나타낸다.
+public class Posts extends BaseTimeEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // 기본키
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment 같은거
     private Long id;
 
     @Column(length = 500, nullable = false)
