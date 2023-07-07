@@ -20,10 +20,10 @@ public class IndexControllerTest {
     @Test
     public void 메인페이지_로딩() { // 스프링 시큐리티 의존성을 없애야 함..안 그러면 로그인화면부터 떠서 테스팅 안됨
         //when
-        String body = this.restTemplate.getForObject("/index", String.class);
+        String body = this.restTemplate.getForObject("/", String.class);
 
         System.out.println(body);
         //then
-        assertThat(body).contains("<h1>스프링 부트로 시작하는 웹서비스</h1>");
+        assertThat(body).contains("<h1>스프링부트로 시작하는 웹 서비스 Ver.2</h1>");
     }
 }
