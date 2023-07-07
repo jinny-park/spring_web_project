@@ -34,9 +34,4 @@ public class IndexController {
         return "posts-update";
     }
 
-
-    @GetMapping("/main")
-    public String main(){
-        return "main";
-    }
 }
